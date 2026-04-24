@@ -48,9 +48,23 @@ export default function Header() {
           </nav>
         </div>
       )}
-      {/* Cloud bottom edge */}
+      {/* Cloud bottom edge — mobile */}
       <svg
-        className="absolute bottom-0 left-0 w-full pointer-events-none translate-y-full"
+        className="md:hidden absolute bottom-0 left-0 w-full pointer-events-none translate-y-full"
+        viewBox="0 0 400 64"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+        height={64}
+        aria-hidden="true"
+      >
+        <path
+          d="M0,0 Q50,64 100,0 Q150,64 200,0 Q250,64 300,0 Q350,64 400,0 Z"
+          fill="white"
+        />
+      </svg>
+      {/* Cloud bottom edge — desktop */}
+      <svg
+        className="hidden md:block absolute bottom-0 left-0 w-full pointer-events-none translate-y-full"
         viewBox="0 0 1440 48"
         preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg"
