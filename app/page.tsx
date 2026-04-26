@@ -2,6 +2,8 @@ import { Heart, Users, Clock, BookOpen, Star, Phone, Mail, MapPin, Baby } from '
 import Image from 'next/image';
 import Header from '@/components/Header';
 import RiseOnScroll from '@/components/RiseOnScroll';
+import ContactForm from '@/components/ContactForm';
+import PhotoCarousel from '@/components/PhotoCarousel';
 
 export default function Home() {
   return (
@@ -53,7 +55,7 @@ export default function Home() {
             <RiseOnScroll delay={0}>
               <div className="p-6 sm:p-8 text-center">
                 <Clock className="w-10 h-10 sm:w-12 sm:h-12 text-orange-500 mb-4 mx-auto" />
-                <h3 className="font-pacifico text-xl sm:text-2xl text-gray-800">Monday–Friday<br />7:00 AM – 6:00 PM</h3>
+                <h3 className="font-pacifico text-xl sm:text-2xl text-gray-800">Monday–Friday<br />8:30 AM – 6:00 PM</h3>
               </div>
             </RiseOnScroll>
 
@@ -165,15 +167,8 @@ export default function Home() {
             </div>
           </RiseOnScroll>
 
-          {/* Photos at bottom */}
-          <div className="flex gap-4">
-            <div className="w-1/2 h-[380px] rounded-3xl overflow-hidden shadow-lg">
-              <Image src="/images/image0.jpeg" alt="Child playing outdoors" width={600} height={700} className="w-full h-full object-cover" />
-            </div>
-            <div className="w-1/2 h-[380px] rounded-3xl overflow-hidden shadow-lg">
-              <Image src="/images/image1.jpeg" alt="Kids playing on slide" width={600} height={700} className="w-full h-full object-cover" />
-            </div>
-          </div>
+          {/* Photo carousel */}
+          <PhotoCarousel />
         </div>
       </section>
 
@@ -199,7 +194,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-xs sm:text-sm text-gray-500">Call us</p>
-                    <p className="text-base sm:text-lg text-gray-800">(555) 123-4567</p>
+                    <p className="text-base sm:text-lg text-gray-800">(650) 302-8856</p>
                   </div>
                 </div>
 
@@ -209,7 +204,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-xs sm:text-sm text-gray-500">Email us</p>
-                    <p className="text-base sm:text-lg text-gray-800 break-words">hello@sunnylanddaycare.com</p>
+                    <p className="text-base sm:text-lg text-gray-800 break-words">sunnyland6@hotmail.com</p>
                   </div>
                 </div>
 
@@ -219,45 +214,21 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-xs sm:text-sm text-gray-500">Visit us</p>
-                    <p className="text-base sm:text-lg text-gray-800">123 Sunshine Lane<br />Happy Town, ST 12345</p>
+                    <p className="text-base sm:text-lg text-gray-800">717 Birch Ave<br />San Mateo, CA 94402</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-6 sm:mt-8 p-5 sm:p-6 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl">
                 <h4 className="text-base sm:text-lg mb-3 text-gray-800">Operating Hours</h4>
-                <p className="text-sm sm:text-base text-gray-700">Monday – Friday: 7:00 AM – 6:00 PM</p>
+                <p className="text-sm sm:text-base text-gray-700">Monday – Friday: 8:30 AM – 6:00 PM</p>
                 <p className="text-sm sm:text-base text-gray-700">Saturday – Sunday: Closed</p>
               </div>
             </div>
 
             <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-xl">
               <h3 className="text-xl sm:text-2xl mb-6 text-gray-800">Send Us a Message</h3>
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-gray-700 mb-2 text-sm sm:text-base">Parent&apos;s Name</label>
-                  <input type="text" placeholder="Your full name" className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-yellow-400 focus:outline-none transition-colors text-sm sm:text-base" />
-                </div>
-                <div>
-                  <label className="block text-gray-700 mb-2 text-sm sm:text-base">Email</label>
-                  <input type="email" placeholder="your@email.com" className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-yellow-400 focus:outline-none transition-colors text-sm sm:text-base" />
-                </div>
-                <div>
-                  <label className="block text-gray-700 mb-2 text-sm sm:text-base">Phone</label>
-                  <input type="tel" placeholder="(555) 123-4567" className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-yellow-400 focus:outline-none transition-colors text-sm sm:text-base" />
-                </div>
-                <div>
-                  <label className="block text-gray-700 mb-2 text-sm sm:text-base">Child&apos;s Age</label>
-                  <input type="text" placeholder="e.g., 2 years old" className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-yellow-400 focus:outline-none transition-colors text-sm sm:text-base" />
-                </div>
-                <div>
-                  <label className="block text-gray-700 mb-2 text-sm sm:text-base">Message</label>
-                  <textarea rows={4} placeholder="Tell us about your childcare needs..." className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-yellow-400 focus:outline-none transition-colors text-sm sm:text-base"></textarea>
-                </div>
-                <button type="submit" className="w-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white py-4 rounded-xl hover:from-yellow-500 hover:to-orange-500 transition-all shadow-lg text-sm sm:text-base">
-                  Send Message
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
